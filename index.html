@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quality Indicator Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Manage Quality Indicators</h1>
+    <div class="button-group">
+        <a href="{{ url_for('add_quality_indicator') }}"><button>Add Quality Indicator</button></a>
+        <a href="{{ url_for('add_division_dept') }}"><button>Add Division, Department, and Sub-Department</button></a>
+        <a href="{{ url_for('tag_quality_indicator') }}"><button>Tag Quality Indicators</button></a>
+    </div>
+</body>
+</html>

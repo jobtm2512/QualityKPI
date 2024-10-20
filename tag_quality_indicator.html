@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tag Quality Indicator</title>
+</head>
+<body>
+    <h1>Tag Quality Indicator</h1>
+    <form action="" method="POST">
+
+        <!-- Quality Indicator Dropdown -->
+        <label for="quality_indicator_id">Quality Indicator:</label>
+        <select name="quality_indicator_id" id="quality_indicator_id" required>
+            <option value="" disabled selected>Select Quality Indicator</option>
+            {% for indicator in quality_indicators %}
+                <option value="{{ indicator[0] }}">{{ indicator[0] }} - {{ indicator[1] }}</option>
+            {% endfor %}
+        </select><br>
+
+        <!-- Department Dropdown -->
+        <label for="department_id">Department:</label>
+        <select name="department_id" id="department_id" required>
+            <option value="" disabled selected>Select Department</option>
+            {% for dept in departments %}
+                <option value="{{ dept[0] }}">{{ dept[0] }} - {{ dept[1] }}</option>
+            {% endfor %}
+        </select><br>
+
+        <!-- Sub-Department Dropdown (Optional) -->
+        <label for="sub_department_id">Sub-Department (Optional):</label>
+        <select name="sub_department_id" id="sub_department_id">
+            <option value="" disabled selected>Select Sub-Department (Optional)</option>
+            {% for sub_dept in sub_departments %}
+                <option value="{{ sub_dept[0] }}">{{ sub_dept[0] }} - {{ sub_dept[1] }}</option>
+            {% endfor %}
+        </select><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

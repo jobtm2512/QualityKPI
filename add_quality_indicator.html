@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Quality Indicator</title>
+</head>
+<body>
+    <h1>Add Quality Indicator</h1>
+    <form action="" method="POST">
+        <label>Indicator ID:</label>
+        <input type="text" name="indicator_id" value="{{ next_indicator_id }}" disabled><br>
+        <label>Indicator Name:</label>
+        <input type="text" name="indicator_name" required><br>
+        <label>Numerator:</label>
+        <input type="text" name="numerator" required><br>
+        <label>Denominator:</label>
+        <input type="text" name="denominator" required><br>
+        <label>Factor:</label>
+        <input type="text" name="factor" required><br>
+        <label>Frequency:</label>
+        <input type="text" name="frequency" required><br>
+        <label>Benchmark:</label>
+        <input type="text" name="benchmark" required><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
